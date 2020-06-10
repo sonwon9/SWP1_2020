@@ -1,2 +1,2 @@
 20203083 Son WonCheol
-Kookmin Univ. SW(CS)
+Kookmin univ. SW(CS)
