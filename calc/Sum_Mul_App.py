@@ -6,13 +6,13 @@ def application(environ, start_response):
     a = d.get('a', [''])[0]
     b = d.get('b', [''])[0]
 
-    sum = '0'
-    mul = '0'
-    
-    if '' not in [a,b]:
+    try:
         a, b = int(a), int(b)
         sum = str(a + b)
         mul = str(a * b)
+    except ValueError:
+	sum = 'You have entered invalid values.'
+	mul = 'Please enter the numbers.'
         
     response_body = html % {
         'sum': sum,
@@ -23,3 +23,45 @@ def application(environ, start_response):
         ('Content-Length', str(len(response_body)))
     ])
     return [response_body]
+
+
+
+
+
+
+
+
+
+
+
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
